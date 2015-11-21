@@ -43,3 +43,4 @@ autocmd! BufNewFile,BufRead *.pde setlocal ft=arduino
 
 " Use doxygen syntax for .dox files
 au BufNewFile,BufRead *.dox set filetype=doxygen
+au BufNewFile,BufRead *.json set ft=javascript                                                                                         
