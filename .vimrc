@@ -44,3 +44,10 @@ autocmd! BufNewFile,BufRead *.pde setlocal ft=arduino
 " Use doxygen syntax for .dox files
 au BufNewFile,BufRead *.dox set filetype=doxygen
 au BufNewFile,BufRead *.json set ft=javascript                                                                                         
+
+" Set screen title to match the buffer 
+" Use Control-V ESC for the special characters
+set t_ts=^[k
+set t_fs=^[\
+auto BufEnter * :set title | let &titlestring = expand('%')
+auto VimLeave * :set t_ts=^[kbash^[\
